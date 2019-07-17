@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>CREATE NEW BLOG</h1>
+<h3>{{ message }}</h3>
+<div class="container page-form">
+    <form id="create-blog-form" action="/blogs/new" method="post">
+        <div class="form-group">
+            <label for="title">Blog Title</label>
+            <input type="text" id="title" class="form-control" name="title" placeholder="Enter Title">
+        </div>
+        <div class="form-group">
+            <label for="description">Blog Description</label>
+            <input type="text" id="description" class="form-control" name="description" placeholder="Give a description">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Create</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

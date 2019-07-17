@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>LOGIN</h1>
+<h3>{{ message }}</h3>
+<div class="container page-form">
+    <form id="login-form" action="/auth/login" method="post">
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" class="form-control" name="email" placeholder="Enter E-Mail">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Login</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
